@@ -27,8 +27,8 @@ webuselist <- list(
     xtline1 = "fictional data on calories consumed"
 )
  
-webuse <- function(data, version = 14, envir = parent.frame()) {
-    d <- read_dta(paste0("http://www.stata-press.com/data/r",version,"/",data,".dta"))
+webuse <- function(data, version = 15, envir = parent.frame()) {
+    d <- read_dta(paste0("https://www.stata-press.com/data/r",version,"/",data,".dta"))
     assign(data, d, envir = envir)
     invisible(d)
 }
